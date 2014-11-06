@@ -1,14 +1,12 @@
 from django.contrib import admin
+from adminsortable.admin import SortableAdminMixin
 from timecard.models import Job, User
 
 # Register your models here.
 class JobAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (None,                  {'fields': ['job_active', 'job_name']}),
-        ('Date information',    {'fields': ['job_created']}),
-    ]
-    list_display = ('job_name', 'job_active', 'job_created')
-    list_filter = ['job_active', 'job_created']
+    fields = ['job_active', 'job_name']
+    list_display = ('job_name', 'job_active')
+    list_filter = ['job_active']
     search_fields = ['job_name']
 admin.site.register(Job, JobAdmin)
 
