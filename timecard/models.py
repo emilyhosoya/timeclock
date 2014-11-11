@@ -17,3 +17,10 @@ class User(models.Model):
     isActive = models.BooleanField("Active", default=True)
     def __unicode__(self):
         return u'%s %s' % (self.first_name, self.last_name)
+
+# class Punch(models.Model):
+#     employee = models.ForeignKey(User)
+#     job = models.ForeignKey(Job)
+#     time = models.DateTimeField('punch time', auto_now=False, auto_now_add=False)
+#     punch_type = models.CharField(max_length=3, choices=PUNCH_TYPE_CHOICES)
+#     log = models.TextField(max_length=600)
