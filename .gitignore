@@ -244,6 +244,7 @@ Desktop.ini
 #############
 
 *.py[co]
+*.pyc
 
 # Packages
 *.egg
