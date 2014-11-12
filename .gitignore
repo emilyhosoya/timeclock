@@ -36,6 +36,7 @@ media/*
 database.conf
 secret_key.conf
 AquaSensor/static/timezones.json
+settings.py
 
 #################
 ## PyCharm
