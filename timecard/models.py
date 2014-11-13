@@ -13,6 +13,7 @@ class Job(models.Model):
         ordering = ('job_order',)
 
 class Employee(models.Model):
+    # user = models.ForeignKey(User)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     isActive = models.BooleanField("Active", default=True)
